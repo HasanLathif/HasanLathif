@@ -20,6 +20,14 @@
             color: #064e3b; /* emerald-900 */
             font-weight: 600;
         }
+        /* Hide scrollbar for image sliders but allow scrolling */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
     </style>
 </head>
 <body class="bg-teal-950 text-gray-200">
@@ -28,51 +36,157 @@
 
         <!-- === 1. HEADER & ABOUT ME === -->
         <header class="mb-12">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-                <div>
+            <div class="flex flex-col-reverse md:flex-row justify-between items-center gap-8">
+                <div class="flex-1">
                     <!-- Main Header -->
-                    <h1 class="text-4xl md:text-5xl font-bold text-emerald-400">Hasan Abdul Lathif</h1>
+                    <h1 class="text-4xl md:text-5xl font-bold text-emerald-300">Hasan Abdul Lathif</h1>
                     <p class="text-xl md:text-2xl text-gray-300 mt-2">Biomedical Engineering Student | Data, AI, & IoT</p>
+                    
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.linkedin.com/in/hasan-abdul-lathif/" target="_blank" rel="noopener noreferrer" class="text-lg text-emerald-400 hover:underline">LinkedIn</a>
+                        <a href="https://github.com/HasanLathif" target="_blank" rel="noopener noreferrer" class="text-lg text-emerald-400 hover:underline">GitHub</a>
+                        <a href="mailto:hasanabdull158@gmail.com" class="text-lg text-emerald-400 hover:underline">Email</a>
+                    </div>
                 </div>
-                <div class="flex space-x-4 mt-4 md:mt-0">
-                    <!-- Links -->
-                    <a href="https://www.linkedin.com/in/hasan-abdul-lathif/" target="_blank" rel="noopener noreferrer" class="text-lg text-emerald-400 hover:underline">LinkedIn</a>
-                    <a href="https://github.com/HasanLathif" target="_blank" rel="noopener noreferrer" class="text-lg text-emerald-400 hover:underline">GitHub</a>
-                    <a href="mailto:hasanabdull158@gmail.com" class="text-lg text-emerald-400 hover:underline">Email</a>
+
+                <!-- PROFILE PHOTO -->
+                <!-- REPLACE THE LINK BELOW WITH YOUR PHOTO URL -->
+                <div class="w-40 h-40 md:w-48 md:h-48 flex-shrink-0">
+                    <img src="profile-photo.jpg" alt="Hasan Abdul Lathif" class="w-full h-full object-cover rounded-full border-4 border-emerald-500 shadow-xl">
                 </div>
             </div>
 
-            <!-- NEW "ABOUT ME" TEXT -->
-            <div class="mt-8 bg-teal-900 p-6 rounded-lg shadow-xl">
-                <h2 class="text-2xl font-semibold mb-4 text-emerald-400">About Me</h2>
+            <!-- ABOUT ME TEXT -->
+            <div class="mt-8 bg-teal-900 p-6 rounded-lg shadow-xl border-l-4 border-emerald-500">
+                <h2 class="text-2xl font-semibold mb-4 text-emerald-300">About Me</h2>
                 <p class="text-gray-200 text-lg leading-relaxed">
                     Hello! I'm Hasan, a final-year BME student at UI. I'm passionate about building technology that solves real-world health problems. My work lives at the intersection of <strong class="text-emerald-300">Data Science</strong> (training AI models for diagnostics), <strong class="text-emerald-300">Hardware/IoT</strong> (building patient monitoring devices), and <strong class="text-emerald-300">AI</strong>. I'm looking for a role where I can apply this full-stack skill set to make a difference in med-tech.
                 </p>
             </div>
         </header>
 
-        <!-- === 2. PROJECTS === -->
+        <!-- === 2. PROFESSIONAL EXPERIENCE (New Section) === -->
         <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-center text-emerald-400">My 15 Projects</h2>
+            <h2 class="text-3xl font-bold mb-6 text-center text-emerald-300">Professional Experience</h2>
+            <div class="space-y-8">
+
+                <!-- Job 1: I-CELL -->
+                <div class="bg-teal-900 rounded-lg shadow-xl overflow-hidden p-6">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">R&D Intern</h3>
+                            <p class="text-emerald-400 text-lg">Lab Reverse Engineering Unit Wirausaha dan Inovasi (I-CELL FTUI)</p>
+                        </div>
+                        <p class="text-gray-400 font-medium mt-2 md:mt-0">Dec 2024 – Feb 2025</p>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-300 mb-6 space-y-1">
+                        <li>Designed the complete electronic system for an oxygen concentrator, achieving 50-54% oxygen purity.</li>
+                        <li>Managed full PCB assembly, from layout review to component soldering and system troubleshooting.</li>
+                    </ul>
+                    <!-- IMAGE SLIDER -->
+                    <p class="text-sm text-gray-500 mb-2 italic">Swipe to see activities:</p>
+                    <div class="flex overflow-x-auto space-x-4 no-scrollbar pb-2">
+                        <img src="https://placehold.co/300x200/042f2e/10b981?text=PCB+Assembly" class="h-40 rounded-md shadow-md flex-shrink-0" alt="Work Photo 1">
+                        <img src="https://placehold.co/300x200/042f2e/10b981?text=System+Testing" class="h-40 rounded-md shadow-md flex-shrink-0" alt="Work Photo 2">
+                        <img src="https://placehold.co/300x200/042f2e/10b981?text=Final+Prototype" class="h-40 rounded-md shadow-md flex-shrink-0" alt="Work Photo 3">
+                    </div>
+                </div>
+
+                <!-- Job 2: Lab Assistant -->
+                <div class="bg-teal-900 rounded-lg shadow-xl overflow-hidden p-6">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Laboratory Assistant</h3>
+                            <p class="text-emerald-400 text-lg">Embedded Biomedical Systems | Universitas Indonesia</p>
+                        </div>
+                        <p class="text-gray-400 font-medium mt-2 md:mt-0">Sep 2025 – Present</p>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-300 mb-6 space-y-1">
+                        <li>Troubleshoot hardware (microcontrollers, sensors) and software issues for student experiments.</li>
+                        <li>Verify component functionality and maintain laboratory operational standards.</li>
+                    </ul>
+                    <!-- IMAGE SLIDER -->
+                    <div class="flex overflow-x-auto space-x-4 no-scrollbar pb-2">
+                        <img src="https://placehold.co/300x200/042f2e/10b981?text=Teaching+Students" class="h-40 rounded-md shadow-md flex-shrink-0" alt="Lab Photo 1">
+                        <img src="https://placehold.co/300x200/042f2e/10b981?text=Circuit+Debugging" class="h-40 rounded-md shadow-md flex-shrink-0" alt="Lab Photo 2">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- === 3. ORGANIZATIONAL EXPERIENCE (New Section) === -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center text-emerald-300">Organizational Experience</h2>
+            <div class="space-y-8">
+
+                <!-- Org 1: IEEE President -->
+                <div class="bg-teal-900 rounded-lg shadow-xl overflow-hidden p-6">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">President</h3>
+                            <p class="text-emerald-400 text-lg">IEEE Student Branch University of Indonesia (IEEE SBUI)</p>
+                        </div>
+                        <p class="text-gray-400 font-medium mt-2 md:mt-0">Jan 2024 – Jan 2025</p>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-300 mb-6 space-y-1">
+                        <li>Led a 61-person student organization, overseeing 6 board directors and complex project timelines.</li>
+                        <li>Directed a digital engagement strategy that grew Instagram followers by 30% (2,100+).</li>
+                        <li>Oversaw major events including industry company visits and technical workshops.</li>
+                    </ul>
+                    <!-- IMAGE SLIDER -->
+                    <div class="flex overflow-x-auto space-x-4 no-scrollbar pb-2">
+                        <img src="https://placehold.co/300x200/042f2e/10b981?text=IEEE+Team+Photo" class="h-40 rounded-md shadow-md flex-shrink-0" alt="Org Photo 1">
+                        <img src="https://placehold.co/300x200/042f2e/10b981?text=Leading+Meeting" class="h-40 rounded-md shadow-md flex-shrink-0" alt="Org Photo 2">
+                        <img src="https://placehold.co/300x200/042f2e/10b981?text=Event+Execution" class="h-40 rounded-md shadow-md flex-shrink-0" alt="Org Photo 3">
+                    </div>
+                </div>
+
+                <!-- Org 2: IME FTUI -->
+                <div class="bg-teal-900 rounded-lg shadow-xl overflow-hidden p-6">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Staff of Science and Technology</h3>
+                            <p class="text-emerald-400 text-lg">Ikatan Mahasiswa Elektro FTUI (IME FTUI)</p>
+                        </div>
+                        <p class="text-gray-400 font-medium mt-2 md:mt-0">Feb 2023 – Feb 2024</p>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-300 mb-6 space-y-1">
+                        <li>Recognized as "Best Staff" (Q1 2023) for outstanding project management.</li>
+                        <li>Led the "Technoskill 1.0" project as Person in Charge.</li>
+                    </ul>
+                    <!-- IMAGE SLIDER -->
+                    <div class="flex overflow-x-auto space-x-4 no-scrollbar pb-2">
+                        <img src="https://placehold.co/300x200/042f2e/10b981?text=Technoskill+Event" class="h-40 rounded-md shadow-md flex-shrink-0" alt="IME Photo 1">
+                        <img src="https://placehold.co/300x200/042f2e/10b981?text=Award+Moment" class="h-40 rounded-md shadow-md flex-shrink-0" alt="IME Photo 2">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- === 4. PROJECTS === -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center text-emerald-300">Technical Projects</h2>
 
             <!-- FILTER BUTTONS -->
             <div id="filter-buttons" class="flex flex-wrap justify-center gap-2 mb-8">
                 <button class="filter-btn active px-4 py-2 rounded-full font-medium bg-teal-800 text-gray-200 hover:bg-teal-700" data-filter="all">Show All (15)</button>
-                <button class="filter-btn px-4 py-2 rounded-full font-medium bg-teal-800 text-gray-200 hover:bg-teal-700" data-filter="data-science">Data Science & AI (5)</button>
+                <button class="filter-btn px-4 py-2 rounded-full font-medium bg-teal-800 text-gray-200 hover:bg-teal-700" data-filter="data-science">Data Science & AI (6)</button>
                 <button class="filter-btn px-4 py-2 rounded-full font-medium bg-teal-800 text-gray-200 hover:bg-teal-700" data-filter="hardware">Hardware & IoT (6)</button>
-                <button class="filter-btn px-4 py-2 rounded-full font-medium bg-teal-800 text-gray-200 hover:bg-teal-700" data-filter="other">Other (4)</button>
+                <button class="filter-btn px-4 py-2 rounded-full font-medium bg-teal-800 text-gray-200 hover:bg-teal-700" data-filter="other">Other (3)</button>
             </div>
 
             <!-- PROJECTS GRID -->
             <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                <!-- Project 1: Thesis -->
-                <div class="project-card bg-teal-900 rounded-lg shadow-xl overflow-hidden" data-tags="data-science">
-                    <img src="https://placehold.co/600x400/0f766e/a7f3d0?text=Thesis:+ViT+Stem+Cells" alt="ViT Thesis Project" class="w-full h-48 object-cover">
+                <!-- Project 1: Thesis (UPDATED) -->
+                <div class="project-card bg-teal-900 rounded-lg shadow-xl overflow-hidden" data-tags="hardware iot">
+                    <img src="https://placehold.co/600x400/115e59/99f6e4?text=Infant+IoT+Monitor" alt="New Thesis Project" class="w-full h-48 object-cover">
                     <div class="p-5">
-                        <h3 class="text-xl font-semibold mb-2 text-white">[Ongoing] Thesis: ViT for Stem Cell Segmentation</h3>
-                        <p class="text-gray-200 mb-4 text-sm">Developing a Vision Transformer (ViT) model to automate the segmentation and classification of stem cell differentiation.</p>
-                        <a href="https://github.com/HasanLathif/thesis-vit-stem-cell-segmentation" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-400 hover:text-emerald-300">View Details &rarr;</a>
+                        <h3 class="text-xl font-semibold mb-2 text-white">[Ongoing] IoT Infant Vital Monitoring System</h3>
+                        <p class="text-gray-300 mb-4 text-sm">Developing a non-adhesive, split-node wearable system (Chest Strap & Smart Socks) for infant respiratory and SpO2 monitoring using Sensor Fusion.</p>
+                        <a href="https://github.com/HasanLathif/integrated-infant-vital-monitoring-system" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-300 hover:text-emerald-200">View Details &rarr;</a>
                     </div>
                 </div>
 
@@ -80,9 +194,9 @@
                 <div class="project-card bg-teal-900 rounded-lg shadow-xl overflow-hidden" data-tags="hardware iot">
                     <img src="https://placehold.co/600x400/115e59/99f6e4?text=RUBIFlex+Capstone" alt="RUBIFlex Project" class="w-full h-48 object-cover">
                     <div class="p-5">
-                        <h3 class="text-xl font-semibold mb-2 text-white">[Ongoing] RUBIFlex: FES Neurorehab System</h3>
-                        <p class="text-gray-200 mb-4 text-sm">Leading electrical, IoT, and web dashboard development for an ESP32-based FES rehabilitation device.</p>
-                        <a href="https://github.com/HasanLathif/rubiflex-capstone-neurorehab" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-400 hover:text-emerald-300">View Details &rarr;</a>
+                        <h3 class="text-xl font-semibold mb-2 text-white">[Complete] RUBIflex: FES Neurorehab System</h3>
+                        <p class="text-gray-300 mb-4 text-sm">Leading electrical, IoT, and web dashboard development for an ESP32-based FES rehabilitation device.</p>
+                        <a href="https://github.com/HasanLathif/rubiflex-capstone-neurorehab" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-300 hover:text-emerald-200">View Details &rarr;</a>
                     </div>
                 </div>
 
@@ -91,8 +205,8 @@
                     <img src="https://placehold.co/600x400/0f766e/a7f3d0?text=AI+Skin+Lesion" alt="Skin Lesion AI" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <h3 class="text-xl font-semibold mb-2 text-white">AI Skin Lesion Classifier (86% Acc)</h3>
-                        <p class="text-gray-200 mb-4 text-sm">Trained a DenseNet121 model using TensorFlow to classify 7 types of skin lesions from the HAM10000 dataset.</p>
-                        <a href="https://github.com/HasanLathif/ai-skin-lesion-classification-densenet" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-400 hover:text-emerald-300">View Details &rarr;</a>
+                        <p class="text-gray-300 mb-4 text-sm">Trained a DenseNet121 model using TensorFlow to classify 7 types of skin lesions from the HAM10000 dataset.</p>
+                        <a href="https://github.com/HasanLathif/ai-skin-lesion-classification-densenet" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-300 hover:text-emerald-200">View Details &rarr;</a>
                     </div>
                 </div>
 
@@ -101,8 +215,8 @@
                     <img src="https://placehold.co/600x400/0f766e/a7f3d0?text=YOLO+Blood+Cells" alt="YOLO Blood Cell" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <h3 class="text-xl font-semibold mb-2 text-white">YOLOv10 Blood Cell Classifier</h3>
-                        <p class="text-gray-200 mb-4 text-sm">Trained a YOLOv10 model to detect, classify, and count RBCs, WBCs, and Platelets from microscope images.</p>
-                        <a href="https://github.com/HasanLathif/biomedical-ai-yolo-blood-cell" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-400 hover:text-emerald-300">View Details &rarr;</a>
+                        <p class="text-gray-300 mb-4 text-sm">Trained a YOLOv10 model to detect, classify, and count RBCs, WBCs, and Platelets from microscope images.</p>
+                        <a href="https://github.com/HasanLathif/biomedical-ai-yolo-blood-cell" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-300 hover:text-emerald-200">View Details &rarr;</a>
                     </div>
                 </div>
                 
@@ -111,8 +225,8 @@
                     <img src="https://placehold.co/600x400/115e59/99f6e4?text=CST+Antenna+Design" alt="CST Antenna" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <h3 class="text-xl font-semibold mb-2 text-white">RF Antenna for Brain Tumor Detection</h3>
-                        <p class="text-gray-200 mb-4 text-sm">Solo project: Designed and simulated a 2-element microstrip patch antenna for microwave imaging using CST Studio Suite.</p>
-                        <a href="https://github.com/HasanLathif/cst-microstrip-antenna-brain-tumor" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-400 hover:text-emerald-300">View Details &rarr;</a>
+                        <p class="text-gray-300 mb-4 text-sm">Solo project: Designed and simulated a 2-element microstrip patch antenna for microwave imaging using CST Studio Suite.</p>
+                        <a href="https://github.com/HasanLathif/cst-microstrip-antenna-brain-tumor" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-300 hover:text-emerald-200">View Details &rarr;</a>
                     </div>
                 </div>
 
@@ -121,8 +235,8 @@
                     <img src="https://placehold.co/600x400/115e59/99f6e4?text=VitaSense+Monitor" alt="VitaSense" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <h3 class="text-xl font-semibold mb-2 text-white">VitaSense: Real-Time Health Monitor</h3>
-                        <p class="text-gray-200 mb-4 text-sm">Built an ESP32-based multi-sensor device (HR, SpO2, Temp) that streams live data to a Blynk IoT dashboard.</p>
-                        <a href="https://github.com/HasanLathif/vitasense-health-monitor-blynk" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-400 hover:text-emerald-300">View Details &rarr;</a>
+                        <p class="text-gray-300 mb-4 text-sm">Built an ESP32-based multi-sensor device (HR, SpO2, Temp) that streams live data to a Blynk IoT dashboard.</p>
+                        <a href="https://github.com/HasanLathif/vitasense-health-monitor-blynk" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-300 hover:text-emerald-200">View Details &rarr;</a>
                     </div>
                 </div>
 
@@ -131,8 +245,8 @@
                     <img src="https://placehold.co/600x400/0f766e/a7f3d0?text=MATLAB+FIR+Filter" alt="MATLAB GUI" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <h3 class="text-xl font-semibold mb-2 text-white">MATLAB Low-Pass FIR Filter GUI</h3>
-                        <p class="text-gray-200 mb-4 text-sm">Built a full MATLAB GUI App to design, apply, and visualize FIR filters on live audio signals.</p>
-                        <a href="https://github.com/HasanLathif/matlab-fir-filter-gui" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-400 hover:text-emerald-300">View Details &rarr;</a>
+                        <p class="text-gray-300 mb-4 text-sm">Built a full MATLAB GUI App to design, apply, and visualize FIR filters on live audio signals.</p>
+                        <a href="https://github.com/HasanLathif/matlab-fir-filter-gui" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-300 hover:text-emerald-200">View Details &rarr;</a>
                     </div>
                 </div>
 
@@ -141,8 +255,8 @@
                     <img src="https://placehold.co/600x400/0f766e/a7f3d0?text=MATLAB+3D+Brain" alt="3D Brain Viz" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <h3 class="text-xl font-semibold mb-2 text-white">3D MRI Brain Visualizer</h3>
-                        <p class="text-gray-200 mb-4 text-sm">MATLAB project to process NIfTI files, segment white/gray matter, and render an interactive 3D model of the brain.</p>
-                        <a href="https://github.com/HasanLathif/matlab-mri-3d-visualization" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-400 hover:text-emerald-300">View Details &rarr;</a>
+                        <p class="text-gray-300 mb-4 text-sm">MATLAB project to process NIfTI files, segment white/gray matter, and render an interactive 3D model of the brain.</p>
+                        <a href="https://github.com/HasanLathif/matlab-mri-3d-visualization" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-300 hover:text-emerald-200">View Details &rarr;</a>
                     </div>
                 </div>
                 
@@ -151,8 +265,8 @@
                     <img src="https://placehold.co/600x400/115e59/99f6e4?text=Smart+Sock+Design" alt="Smart Sock" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <h3 class="text-xl font-semibold mb-2 text-white">Smart Sock Infant Monitor (Design)</h3>
-                        <p class="text-gray-200 mb-4 text-sm">Solo research project: Designed the complete electrical and system architecture for a wearable ESP32/MAX30102 baby monitor.</p>
-                        <a href="https://github.com/HasanLathif/smart-sock-heart-monitor" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-400 hover:text-emerald-300">View Details &rarr;</a>
+                        <p class="text-gray-300 mb-4 text-sm">Solo research project: Designed the complete electrical and system architecture for a wearable ESP32/MAX30102 baby monitor.</p>
+                        <a href="https://github.com/HasanLathif/smart-sock-heart-monitor" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-300 hover:text-emerald-200">View Details &rarr;</a>
                     </div>
                 </div>
 
@@ -161,8 +275,8 @@
                     <img src="https://placehold.co/600x400/115e59/99f6e4?text=Piezo+Pacemaker" alt="Pacemaker Design" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <h3 class="text-xl font-semibold mb-2 text-white">Self-Powered Pacemaker (Design)</h3>
-                        <p class="text-gray-200 mb-4 text-sm">Designed the circuit for a self-powered pacemaker using a piezoelectric sensor for energy harvesting from cardiovascular motion.</p>
-                        <a href="https://github.com/HasanLathif/piezoelectric-pacemaker-design" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-400 hover:text-emerald-300">View Details &rarr;</a>
+                        <p class="text-gray-300 mb-4 text-sm">Designed the circuit for a self-powered pacemaker using a piezoelectric sensor for energy harvesting from cardiovascular motion.</p>
+                        <a href="https://github.com/HasanLathif/piezoelectric-pacemaker-design" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-300 hover:text-emerald-200">View Details &rarr;</a>
                     </div>
                 </div>
 
@@ -171,8 +285,8 @@
                     <img src="https://placehold.co/600x400/115e59/99f6e4?text=Hearing+Aid+Circuit" alt="Hearing Aid" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <h3 class="text-xl font-semibold mb-2 text-white">Analog Hearing Aid Circuit</h3>
-                        <p class="text-gray-200 mb-4 text-sm">Designed and simulated a multi-stage analog hearing aid circuit with pre-amp and power-amp stages in Proteus.</p>
-                        <a href="https://github.com/HasanLathif/analog-hearing-aid-circuit-proteus" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-400 hover:text-emerald-300">View Details &rarr;</a>
+                        <p class="text-gray-300 mb-4 text-sm">Designed and simulated a multi-stage analog hearing aid circuit with pre-amp and power-amp stages in Proteus.</p>
+                        <a href="https://github.com/HasanLathif/analog-hearing-aid-circuit-proteus" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-300 hover:text-emerald-200">View Details &rarr;</a>
                     </div>
                 </div>
 
@@ -181,8 +295,8 @@
                     <img src="https://placehold.co/600x400/0f766e/a7f3d0?text=FEBio+Tendon+Model" alt="FEBio Model" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <h3 class="text-xl font-semibold mb-2 text-white">FEBio: Tendon Fatigue Study</h3>
-                        <p class="text-gray-200 mb-4 text-sm">Comparative study of tendon vs. synthetic material fatigue behavior using a damage fiber model in FEBio.</p>
-                        <a href="https://github.com/HasanLathif/biomechanics-febio-damage-model" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-400 hover:text-emerald-300">View Details &rarr;</a>
+                        <p class="text-gray-300 mb-4 text-sm">Comparative study of tendon vs. synthetic material fatigue behavior using a damage fiber model in FEBio.</p>
+                        <a href="https://github.com/HasanLathif/biomechanics-febio-damage-model" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-300 hover:text-emerald-200">View Details &rarr;</a>
                     </div>
                 </div>
 
@@ -191,8 +305,8 @@
                     <img src="https://placehold.co/600x400/0f766e/a7f3d0?text=Hodgkin-Huxley" alt="Hodgkin-Huxley" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <h3 class="text-xl font-semibold mb-2 text-white">Hodgkin-Huxley Action Potential Model</h3>
-                        <p class="text-gray-200 mb-4 text-sm">Researched and modeled the physiological control system of a neuron's action potential in MATLAB/Simulink.</p>
-                        <a href="https://github.com/HasanLathif/hodgkin-huxley-action-potential-model" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-400 hover:text-emerald-300">View Details &rarr;</a>
+                        <p class="text-gray-300 mb-4 text-sm">Researched and modeled the physiological control system of a neuron's action potential in MATLAB/Simulink.</p>
+                        <a href="https://github.com/HasanLathif/hodgkin-huxley-action-potential-model" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-300 hover:text-emerald-200">View Details &rarr;</a>
                     </div>
                 </div>
                 
@@ -201,8 +315,8 @@
                     <img src="https://placehold.co/600x400/0f766e/a7f3d0?text=Python+Expert+System" alt="Python Expert System" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <h3 class="text-xl font-semibold mb-2 text-white">Multiparameter Patient Analyzer</h3>
-                        <p class="text-gray-200 mb-4 text-sm">A rule-based Python "expert system" to provide preliminary analysis of 7 vital sign parameters.</p>
-                        <a href="https://github.com/HasanLathif/multiparameter-patient-analyzer" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-400 hover:text-emerald-300">View Details &rarr;</a>
+                        <p class="text-gray-300 mb-4 text-sm">A rule-based Python "expert system" to provide preliminary analysis of 7 vital sign parameters.</p>
+                        <a href="https://github.com/HasanLathif/multiparameter-patient-analyzer" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-300 hover:text-emerald-200">View Details &rarr;</a>
                     </div>
                 </div>
 
@@ -211,17 +325,17 @@
                     <img src="https://placehold.co/600x400/115e59/99f6e4?text=Hospital+System+in+C" alt="Hospital System in C" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <h3 class="text-xl font-semibold mb-2 text-white">Hospital Management System in C</h3>
-                        <p class="text-gray-200 mb-4 text-sm">A terminal-based app in C to manage patient check-ins, room assignments, and check-outs using structs.</p>
-                        <a href="https://github.com/HasanLathif/hospital-management-system-c" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-400 hover:text-emerald-300">View Details &rarr;</a>
+                        <p class="text-gray-300 mb-4 text-sm">A terminal-based app in C to manage patient check-ins, room assignments, and check-outs using structs.</p>
+                        <a href="https://github.com/HasanLathif/hospital-management-system-c" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-300 hover:text-emerald-200">View Details &rarr;</a>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <!-- === 3. AWARDS & CERTIFICATIONS === -->
+        <!-- === 5. AWARDS & CERTIFICATIONS === -->
         <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-center text-emerald-400">Awards & Certifications</h2>
+            <h2 class="text-3xl font-bold mb-6 text-center text-emerald-300">Awards & Certifications</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                 <!-- Google Data Analytics -->
@@ -229,7 +343,7 @@
                     <h3 class="text-xl font-semibold mb-2 text-white">Google Data Analytics Professional Certificate</h3>
                     <p class="text-gray-400 text-sm mb-3">Issued by Coursera (2025)</p>
                     <p class="text-gray-300 mb-4">Completed an 8-course program on data analysis, visualization (Tableau, R), and processing (SQL).</p>
-                    <a href="https://drive.google.com/file/d/1V9TBz6lgWXDAaZeJ1ED-bjHu_sNJ-eIa/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-400 hover:text-emerald-300">View Certificate &rarr;</a>
+                    <a href="https://drive.google.com/file/d/1V9TBz6lgWXDAaZeJ1ED-bjHu_sNJ-eIa/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-300 hover:text-emerald-200">View Certificate &rarr;</a>
                 </div>
 
                 <!-- PKM AI -->
@@ -237,7 +351,7 @@
                     <h3 class="text-xl font-semibold mb-2 text-white">3rd Place Winner, PKM-AI</h3>
                     <p class="text-gray-400 text-sm mb-3">Issued by OIM Universitas Indonesia (2023)</p>
                     <p class="text-gray-300 mb-4">Co-authored an award-winning scientific paper on a CNN model for detecting brain tumors from MRI scans.</p>
-                    <a href="https://drive.google.com/file/d/1ZyBfonesbWVc56-xAkBheA02ZRyg0jcX/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-400 hover:text-emerald-300">View Certificate &rarr;</a>
+                    <a href="https://drive.google.com/file/d/1ZyBfonesbWVc56-xAkBheA02ZRyg0jcX/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-300 hover:text-emerald-200">View Certificate &rarr;</a>
                 </div>
 
                 <!-- KSN -->
@@ -245,7 +359,7 @@
                     <h3 class="text-xl font-semibold mb-2 text-white">Participant, National Science Competition (KSN)</h3>
                     <p class="text-gray-400 text-sm mb-3">Issued by SMAN 97 Jakarta (2021)</p>
                     <p class="text-gray-300 mb-4">Selected to represent my school in the district-level National Science Competition (KSN) in Mathematics.</p>
-                    <a href="https://drive.google.com/file/d/1N147B50lrDx9nW-PhtAGhqMWgpgWflP3/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-400 hover:text-emerald-300">View Certificate &rarr;</a>
+                    <a href="https://drive.google.com/file/d/1N147B50lrDx9nW-PhtAGhqMWgpgWflP3/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-300 hover:text-emerald-200">View Certificate &rarr;</a>
                 </div>
 
             </div>
